@@ -29,7 +29,7 @@ print("You just earned " + str(new_points) + " points!")
 
 #   6.2.2添加键-值对
 #   字典是动态结构，可随时添加键-值对
-#   添加：依次指定字典名，[键：值]
+#   添加：依次指定字典名，键，值
 print("\n6.2.2")
 alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
@@ -66,16 +66,16 @@ print("Original x-position: " + str(alien_0['x_position']))
 
 # 向右移动外星人
 # 据外星人当前速度决定将其移动多远
-if alien_0['speed'] == 'slow':
-    x_position = 1
-elif alien_0['speed'] == 'medium':
-    x_position = 2
-else:
+if alien_0['speed']  == 'slow':
+    x_increment = 1
+elif alien_0['speed']  == 'medium':
+    x_increment = 2
     # 这个外星人的速度一定很快
-    x_position = 3
+else:
+    x_increment = 3
 
 # 新位置等于老位置加上增量
-alien_0['x_position'] = alien_0['x_position'] + x_position
+alien_0['x_position'] = alien_0['x_position'] + x_increment
 print("New x-position: " + str(alien_0['x_position']) + ".")
 
 
@@ -107,6 +107,7 @@ favorite_languages = {
     'edward': 'ruby',
     'phil': 'python',
 }
-print("Sarah favorite language is " + 
+print("Sarah`s favorite language is " + 
     favorite_languages['sarah'].title() + 
     ".")
+    
