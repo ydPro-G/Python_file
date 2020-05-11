@@ -57,7 +57,7 @@ friend = ['phil','sarah'] # 创建列表指出朋友
 for name in favorite_language.keys(): # 使用方法.keys提取字典中所有键并储存到变量中
     if name in friend: 
         print(" Hi " + name.title() + 
-        ", I see your favarite laanguage is " +
+        ", I see your favarite language is " +
         favorite_language[name].title() + ".") # 将变量name的当前值作为键
 
 # 使用keys()确定某人是否接受了调查
