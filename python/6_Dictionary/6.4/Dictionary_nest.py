@@ -1,6 +1,6 @@
 # 6.4  嵌套，在列表中嵌套字典，在字典中嵌套列表，在字典中嵌套字典
 
-# 6.4.1 字典列表 将字典嵌套进列表，使用for循环输出列表内容
+# 6.4.1 在列表中嵌套字典，使用for循环输出列表内容
 alien_0 = {'color': 'green', 'point': 5}
 alien_1 = {'color': 'yellow', 'points': 10}
 alien_2 = {'color': 'red', 'points': 15}
@@ -15,7 +15,7 @@ print("\n")
 aliens = []
 
 # 创建30个绿色外星人
-for alien_number in range(30):  #告诉python我们要重复这个循环多少次
+for alien_number in range(30):  #其唯一的用途是告诉Python我们要重复这个循环多少次。每次执行这个循环时，都创建一个外星人
     new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
     aliens.append(new_alien) # 每次执行这个循环都创建一个外星人，将其附加到aliens末尾
 
@@ -52,15 +52,51 @@ for alien_number in range(30):
     new_alien = {'color': 'green', 'points': 5, 'speed': 'solw'}
     aliens.append(new_alien)
 
-for alien in aliens[0:3]:
-    if alien == 'green':
+for alien in aliens[0:3]: 
+    # 编写一条if语句来确保只修改绿色外星人，如果是绿色，将其颜色，速度，点数修改
+    if alien['color'] == 'green':  #注意是alien
         alien['color'] = 'yellow'
-        alien['points'] = 10 
         alien['speed'] = 'medium'
-    elif alien == 'yellow':
+        alien['points'] = 10
+    elif alien['color'] == 'yellow':
         alien['color'] = 'red'
-        alien['points'] = 15
         alien['speed'] = 'fast'
+        alien['points'] = 15   # if和elif的关系：python只执行其中一个代码块，通过条件测试后执行紧跟它后面的代码。跳过其余测试
 
 for alien in aliens[:5]:
     print(alien)
+
+
+
+# 6.4.2  在字典中储存列表
+print("\n6.4.2")
+# 储存所点披萨信息
+
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms','extra cheese'],
+}
+
+# 描述所点披萨
+print("You ordered a " + pizza ['crust'] + "-crust pizza" + 
+    " with the following toppings:")
+
+for topping in pizza['toppings']:
+    print("\t" + topping)
+
+
+# 多个喜欢的语言
+print("\n")
+favorite_languages = {
+    'jen': ['Python','ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby','go'],
+    'pjil': ['python','haskell'],
+}
+
+for name,languages in favorite_languages.items():
+        print("\n" + name.title() + " favorite languages are:")
+        for language in languages: # 在一个循环里面
+                               # 使用变量来储存值，因为值是列表
+            print("\t" + language.title())
+   
