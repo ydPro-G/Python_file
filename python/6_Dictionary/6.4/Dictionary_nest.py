@@ -99,4 +99,33 @@ for name,languages in favorite_languages.items():
         for language in languages: # 在一个循环里面
                                # 使用变量来储存值，因为值是列表
             print("\t" + language.title())
-   
+
+
+
+
+
+#6.4.3 在字典中储存字典
+print("\n6.4.3")
+users = {
+    'aeinstein': { # 每个键相关联的值都是一个字典
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princetion',
+    },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'Curie',
+        'location': 'paris'
+    }
+}
+# 遍历字典users，让Python依次将每个键储存在变量username中
+# 依次将与当前键相关联的字典储存再变量user_info中
+for username,user_info in users.items(): 
+    print("\nusername: " + username) # 打印用户名
+
+    full_name = user_info['first'] + " " + user_info['last'] # 将键first和last储存在变量中
+    location1 = user_info['location'] # 将键location储存在变量中
+
+    print("\tFullname: " + full_name)
+    print("\tlocation: " + location1)# Python 允许你自定义的变量名和内置函数名相同，但是使用的时候会导致内置函数名被覆盖。
+
