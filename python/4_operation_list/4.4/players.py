@@ -43,3 +43,15 @@ print(my_foods)
 print(friend_foods)
 
 
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for plpay in players[0:3]:
+    print(plpay)
+aa = players[:]
+print(aa)
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for player in players[:3]:
+    print(player)
+
+
+    

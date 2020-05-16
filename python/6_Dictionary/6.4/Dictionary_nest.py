@@ -15,7 +15,7 @@ print("\n")
 aliens = []
 
 # 创建30个绿色外星人
-for alien_number in range(30):  #其唯一的用途是告诉Python我们要重复这个循环多少次。每次执行这个循环时，都创建一个外星人
+for alien_number in range(30):  #唯一的用途是告诉Python我们要重复这个循环多少次。每次执行这个循环时，都创建一个外星人,因为我们不使用alien_number变量
     new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
     aliens.append(new_alien) # 每次执行这个循环都创建一个外星人，将其附加到aliens末尾
 

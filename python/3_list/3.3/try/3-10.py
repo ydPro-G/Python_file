@@ -32,41 +32,41 @@ print("Delete element 0 from the list using the del [] statement.")
 
 #   pop弹出
 print("\n")
-poped_two = everything.pop(1)
+poped_two = everything.pop(1) 
 print("Use the methed .pop(1) to popup element " + poped_two + ".")
 print(everything)
 
 print("\n")
 print(everything)
 #    我们将值'qingdao'存储在变量remove_qingdao中（）。接下来，我们使用这个变量来告诉Python将哪个值从列表中删除。最后，值'qingdao'已经从列表中删除，但它还存储在变量remove_qingdao中.
-remove_qingdao = 'qingdao'
+remove_qingdao = 'qingdao'   # r = 'aa'  ever.remove(r)
 everything.remove(remove_qingdao)
 print("Use the methed .remove() remove element " + remove_qingdao + ".")
 print(everything)
 
 print("\n")
 print(everything)
-#    .sort()方法，对列表元素按照字母顺序永久性排序
+#    .sort()方法，对列表元素按照字母顺序永久性排序 a.sort()
 everything.sort()
 print(everything)
 
 print("\n")
-#    .sort(reverse=True)方法，将列表元素按照字母顺序相反的顺序永久性排序
+#    .sort(reverse=True)方法，将列表元素按照字母顺序相反的顺序永久性排序   a.sort(reverse=True)
 everything.sort(reverse=True)
 print(everything)
 
 print("\n")
-#   sorted()函数，对列表元素按照字母顺序临时性排序
+#   sorted()函数，对列表元素按照字母顺序临时性排序  print(sorted(aa))
+print(sorted(everything))
 print(sorted(everything))
 
 print("\n")
-#    sorted( ,reverse=True)函数，将列表元素按照字母顺序相反的顺序临时性排序
+#    sorted( ,reverse=True)函数，将列表元素按照字母顺序相反的顺序临时性排序   print(sorted(aa,reverse=True))
 print(sorted(everything,reverse=True))
 
 print("\n")
 everything_new = ['hainan', 'shanghai', 'qingdao', 'shenzhen', 'changjiang', 'huanghe', 'henan']
-print(everything)
-#    .reverse()方法，永久性反转列表元素的排列顺序
+#    .reverse()方法，永久性反转列表元素的排列顺序 
 everything.reverse()
 print(everything)
 
@@ -78,3 +78,7 @@ print(everything)
 print("\n")
 #    len()函数，确定列表的长度
 print(len(everything))
+lne_0 = [1,2,3]
+lne_0.reverse()
+print(lne_0)
+print(len(lne_0))

@@ -110,7 +110,7 @@ favorite_language = {
 for language in favorite_language.values():
     print(language.title())
 
-# 剔除重复项，使用集合(set)
+# 剔除重复项，使用集合set(a)
 print("\n")
 favorite_language = {
     'jen': 'python',

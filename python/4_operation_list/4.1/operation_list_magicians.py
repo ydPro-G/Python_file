@@ -1,6 +1,6 @@
 #    4.1使用for循环遍历整个列表
 magicians = ['alice','david','carolina']
-#    让python从列表magicians[]中取出一个名字，将其储存在变量magician中，然后打印出来，接下来循环这个操作，直至列表中没有其他值
+#    让python从列表中取出一个字符，将其储存在临时变量中，接下来循环这个操作，直到列表中没有其他值
 #    在这里，for循环后面没有其他代码，因此程序结束，如果有其它代码程序会再循环
 for magician in magicians:
     print(magician)

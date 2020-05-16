@@ -8,7 +8,7 @@ print("\nFinished making your pizza!")
 
 print("\n 加if判断")
 requested_toppings = ['mushrooms','green peppers','extra cheese']
-#   让python从列表中取出一个字符，将其储存在临时变量中，接下来循环这个操作，直到列表中没有其他值
+#   让python从列表中取出一个元素，将其储存在临时变量中，接下来循环这个操作，直到列表中没有其他值
 for requested_topping in requested_toppings:
     if requested_topping == 'green peppers':
         print("Sorry,we are out of green peppers right now.")

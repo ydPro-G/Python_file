@@ -6,7 +6,7 @@ for value in range(1,5):
 
 #   使用range（）创建数字列表
 print("\n4.3.2")
-#   使用函数list()将range()的结果直接转换为列表，如果将range()作为list()的参数，输出将作为一个数字列表
+#   使用函数list()将range()的结果直接转换为列表，如果将range()作为list()的参数，输出将作为一个数字列表   list(range(1,10,2))
 numbers = list(range(1,6))
 print(numbers)
 #   使用函数range()时，可指定步长（最后一个2就是指定的步长，递增+2，-2就是递减-2）
@@ -20,7 +20,6 @@ for value_2 in range(1,11):
 #   将新计算得到的平方值附加到列表squares中
     squares.append(value_2**2)
 print(squares)
-
 
 #   4.3.3对数字列表执行简单的统计计算
 print("\n4.3.3")
@@ -44,4 +43,29 @@ power_1 = [value_4**2 for value_4 in range(21,31)]
 print(power_1)
 
 power = [v**2 for v in range(31,41)]
+
+
+power = [a**3 for a in range(41,51)]
+
+power = [b**2 for b in range(1,11)]
 print(power)
+
+power = [c**3 for c in range(2,9)]
+print(power)
+
+power = [d**3 for d in range(10,21)]
+print(power)
+
+power = [e**4 for e in range(1,11)]
+print(power)
+
+power = [f**2 for f in range(1,11)]
+print(power)
+
+
+power = [g**3 for g in range(10,21)]
+for pow in power[:3]:
+    print(pow)
+
+power = [h**2 for h in range(1,11)]
+print(pow)
