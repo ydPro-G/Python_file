@@ -53,5 +53,7 @@ players = ['charles', 'martina', 'michael', 'florence', 'eli']
 for player in players[:3]:
     print(player)
 
-
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for p in players[1:3]:
+    print(p)
     

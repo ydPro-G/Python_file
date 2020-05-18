@@ -69,3 +69,8 @@ for pow in power[:3]:
 
 power = [h**2 for h in range(1,11)]
 print(pow)
+
+power = [j**3 for j in range(11,21)]
+print(power)
+for pow in power:
+    print(str(pow))
