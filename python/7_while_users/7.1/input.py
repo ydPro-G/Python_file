@@ -1,5 +1,6 @@
 # 7.1函数input()的工作原理:让程序暂停运行，等待用户输入，获取输入后，python将其储存在一个变量中
 # 程序等待用户输入，在用户按回车键后继续运行，再将输入储存在变量中
+# 针对集合中的每个元素都一个代码块
 print("7.1")
 message = input("Tell me someting, and I will repeat it back to you:")
 print(message)
@@ -15,7 +16,7 @@ name = input("Please enter your name: ")
 print("Hello " + name + " !")
 
 # 超过一行的提示怎么编写？
-# 将提示储存在一个变量中，再将改变量传递给函数input（）
+# 将提示储存在一个变量中，再将该变量传递给另一个变量使用函数input（）
 prompt = ("If you tell us who you are,we can presonalize the messages you see.")
 prompt += "\nWhat is your first name? "  # 创建多行字符串的方法（运算符+=在存储在prompt中的字符串末尾附加一个字符串）
 
