@@ -66,3 +66,6 @@ else:
 
 
 
+a = "tell me? "
+message = input(a)
+print(message)

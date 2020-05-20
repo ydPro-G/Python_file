@@ -15,11 +15,27 @@ while current_number <= 5:  # 只要变量小于或等于5，就接着运行这�
 print("\n7.2.2")
 prompt = "Tell me something, and I will repeat it back to you: "
 prompt += "\nEnter 'quit' to end the program." # 定义一条提示消息：输入信息或者输入quit退出
-message = "" # 创建一个变量，储存用户输入的值
-while message != 'quit': #首次执行while语句时，需要将message的值与quit进行比较
+message = "" # 创建一个变量，储存用户输入的值，首次执行while语句时，需要将message的值与quit进行比较
+while message != 'quit': # 不等与quit执行接下来的循环
     message = input(prompt) # 显示提示消息，并等待用户输入，获取用户输入的值，储存在message中
-    print(message)
+    print(message)  # 输出用户输入
 
 
 # 修改美中不足
 print("\n加if判断")
+prompt = "\nTell me something, and I will repeat it back to you."
+prompt += "\nEnter 'quit' to end the program."
+
+message = ""
+while message != 'quit':
+    message = input(prompt)
+
+    if message != 'quit': # 在显示消息前做简单检测，如果不是quit打印message，是quit的话就不打印
+        print(message)
+
+
+
+
+# 7.2.3  使用标志
+print("\n7.2.3")
+prompt = "\nTell me something, and"
