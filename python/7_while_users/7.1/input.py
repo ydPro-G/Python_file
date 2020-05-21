@@ -16,7 +16,7 @@ name = input("Please enter your name: ")
 print("Hello " + name + " !")
 
 # 超过一行的提示怎么编写？
-# 将提示储存在一个变量中，再将该变量传递给另一个变量使用函数input（）
+# 将提示储存在一个变量中，再使用函数input（）将该变量传递给另一个变量
 prompt = ("If you tell us who you are,we can presonalize the messages you see.")
 prompt += "\nWhat is your first name? "  # 创建多行字符串的方法（运算符+=在存储在prompt中的字符串末尾附加一个字符串）
 
