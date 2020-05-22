@@ -59,17 +59,47 @@ while active:
 
 
 # 7.2.4  使用break退出循环
-print("\n")
+# 立即退出while循环，不再运行循环中余下的代码，不管条件测试的结果如何
+# 控制程序流程，控制那些代码执行，那些不执行
+print("\n7.2.4")
 prompt = "Please enter the name of a city you have visited:"
 prompt += "\n(Enter 'quit' when you are finished.)"
 
-while True:
+while True:   # v以while True打头的循环将不断运行，直到遇到break语句
     city = input(prompt)
 
-    if city == 'quit':
-        break
+    if city == 'quit': # 不断循环用户输入，直到用户输入'quit'后执行break语句
+        break # 立即退出while循环，在任何python循环中都可使用break语句
     else:
-        print("I`d love to go to " + city.title() + ".")
+        print(city)
+
+
+
+
+
+
+# 7.2.5  在循环中使用continue
+print("\n7.2.5")
+current_number = 0 # 将变量设置为0
+while current_number < 10: # 变量小于10，进入while循环
+    current_number += 1 # 步长+1的方式往上数，为1，2，3，4，5，6，7，8，9
+    if current_number % 2 == 0: # if语句检查current_number与2的求模运算结果
+        continue # 结果为0（意味着变量可被2整除），执行continue语句，忽略余下的代码
+                 # 不能被2整除就循环执行剩余代码
+ 
+    print(current_number)#  1 3 5 7 9 
+
+
+
+
+
+
+# 7.2.6 避免无限循环
+print("\n7.2.6")
+print("注意避免无限循环")
+
+
+
 
 
 
