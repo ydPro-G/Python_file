@@ -23,3 +23,47 @@ for confirmed_0 in confirmed:
     print(confirmed_0.title())
 
 
+
+
+
+#7.3.2 删除包含特定值的所有列表元素
+print("\n7.3.2")
+pets = ['dog','cat','dog','goldfish','cat','rabbit','cat']
+print(pets)
+
+while 'cat' in pets: # cat在列表中，一直循环
+    pets.remove('cat')  #删除cat，直到没有cat结束循环
+
+print(pets)
+
+
+
+
+
+#7.3.3 使用用户输入来填充字典
+print("\n7.3.3")
+responses = {} #
+
+# 设置一个标志，指出调查是否继续
+polling_active =True  # 标志，只要为true就一直循环
+
+while polling_active:
+    name = input("\nWhat is your name? ") # 提示输入被调查者的名字和回答
+    response = input("Which mountain would you like to climb someday? ")
+
+    responses[name] = response  # 将答案存储在字典中，键值对列表，name键，response值
+
+# 看看是否还有人要参与调查
+    repeat = input("Would you like to let another person respond?(yes/no)")
+    if repeat == 'no': # 检查条件
+        polling_active = False   #询问是否还有人参与调查，yes继续while循环，no，标志为False，结束循环
+
+
+# 调查结束，显示结果
+    print("\n--- Poll Results ---")
+    for name,response in responses.items(): # 输出从用户哪里获得的键，值
+        print(name + " Would like to climb " + response + ".")
+
+
+
+   

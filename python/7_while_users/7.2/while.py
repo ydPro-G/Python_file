@@ -78,7 +78,7 @@ while True:   # v以while True打头的循环将不断运行，直到遇到break
 
 
 
-# 7.2.5  在循环中使用continue
+# 7.2.5  在循环中使用continue,加条件退出
 print("\n7.2.5")
 current_number = 0 # 将变量设置为0
 while current_number < 10: # 变量小于10，进入while循环
