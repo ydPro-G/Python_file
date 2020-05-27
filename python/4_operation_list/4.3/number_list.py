@@ -56,21 +56,18 @@ print(power)
 power = [d**3 for d in range(10,21)]
 print(power)
 
-power = [e**4 for e in range(1,11)]
+
+power = [v**2 for v in range(1,11)]
+for pv in power:
+    print(pv)
+
+
+power = [w**3 for w in range(1,6)]
+for pw in power:
+    print(pw)
+
+power = [x**2 for x in range(5,16)]
 print(power)
 
-power = [f**2 for f in range(1,11)]
-print(power)
-
-
-power = [g**3 for g in range(10,21)]
-for pow in power[:3]:
-    print(pow)
-
-power = [h**2 for h in range(1,11)]
-print(pow)
-
-power = [j**3 for j in range(11,21)]
-print(power)
-for pow in power:
-    print(str(pow))
+number = [y**5 for y in range(1,5)]
+print(number)

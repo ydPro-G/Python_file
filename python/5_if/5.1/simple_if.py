@@ -14,10 +14,10 @@ for car in cars:
 print("\n5.2")
 #   5.2.1检测是否相等：一个等号是陈述（将变量X的值设置为xx），两个等号是发问（变量X的值是xx吗？），相等返回True,不相等返回False
 
-#   5.2.2 检查是否相等时区分大小写，两个大小写不同的值会被视为不相等。
+#   5.2.2 大小写对比
 #   函数.lower()可用来检查变量的值，对大小写不同的值同时进行小写比较，不会影响原来的变量
 car = 'Audi'
-car.lower() == 'audi'
+car.lower() == 'audi'  #将变量里的元素转换为小写比较
 print(car)
 
 #   5.2.3检查是否不相等
@@ -30,8 +30,6 @@ if requested_topping != 'anchovies':
 #   5.2.4比较数字
 print("\n5.2.4")
 #   检查数值
-age = 18
-age == 18
 
 answer = 17
 if answer != 42:

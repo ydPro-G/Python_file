@@ -32,7 +32,7 @@ print("Delete element 0 from the list using the del [] statement.")
 
 #   pop弹出
 print("\n")
-poped_two = everything.pop(1) 
+poped_two = everything.pop(1)  # 如果没有指定，从最后面弹出到最前面
 print("Use the methed .pop(1) to popup element " + poped_two + ".")
 print(everything)
 

@@ -17,8 +17,7 @@ for requested_topping in requested_toppings:
 
 print("Finshed making your pizza!")
 
-#   5.4.2确定列表不是空的。如果列表不为空，那么运行for循环，如果为空那么输出else
-#   在if语句中将列表名用在条件表达式中时，Python将在列表至少包含一个元素时返回True，并在列表为空时返回False
+#   5.4.2 在if语句中将列表名用在条件表达式中时，Python将在列表至少包含一个元素时返回True，并在列表为空时返回False
 print("\n5.4.2")
 requested_toppings = []
 
