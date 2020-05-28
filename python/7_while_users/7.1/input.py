@@ -28,13 +28,13 @@ print("\nHello, " + name + " !")
 # 7.1.2  使用int()来获取数值的输入
 print("\n 7.1.2")
 age = input("How old are you? ")
-age = int(age) # 将字符串转换成数值显示
+age = int(age) # 将字符串转换成数值进行比较
 if age >= 18:
     print("true")
 
 print("\n") # 在实际程序中使用函数int()
 height = input("How tall are you, in inches? ")
-height = int(height) # 将字符串转换成数值显示
+height = int(height) # 将字符串转换成数值比较
 
 if height >=36:
     print("\nYou`re tall enough to ride!")
@@ -55,7 +55,7 @@ print(7 % 3) #  1
 print("\n")
 # 判断一个数是奇数还是偶数
 number = input("Enter a number,and I`ll tell you if it`s even or odd: ")
-number = int(number) # 输入的数字以字符串显示，使用int()将字符串转换成数值显示
+number = int(number) # 输入的数字以字符串显示，使用int()将字符串转换成数值比较
 
 if number % 2 == 0: # 如果求模2后是0，说明是整数
     print("\nThe number " + str(number) + " is even.")

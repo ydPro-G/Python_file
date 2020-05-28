@@ -42,25 +42,6 @@ print(power)
 power_1 = [value_4**2 for value_4 in range(21,31)]
 print(power_1)
 
-power = [v**2 for v in range(31,41)]
-
-
-power = [a**3 for a in range(41,51)]
-
-power = [b**2 for b in range(1,11)]
-print(power)
-
-power = [c**3 for c in range(2,9)]
-print(power)
-
-power = [d**3 for d in range(10,21)]
-print(power)
-
-
-power = [v**2 for v in range(1,11)]
-for pv in power:
-    print(pv)
-
 
 power = [w**3 for w in range(1,6)]
 for pw in power:
@@ -70,4 +51,7 @@ power = [x**2 for x in range(5,16)]
 print(power)
 
 number = [y**5 for y in range(1,5)]
+print(number)
+
+number = [x**2 for x in range(11,20)]
 print(number)
