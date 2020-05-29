@@ -21,3 +21,15 @@ def greet_user1(username): # 函数接受代码greet_user1('jeese')传递的信�
 
 greet_user1('jeese') # 代码greet_user1('jeese')调用函数greet_user(),并向它提供执行print语句所需的信息
 greet_user1('sourch') # 可以根据需要调用函数greet_user1()任意次，无论传入什么都会生成相应的输出
+
+
+
+
+
+
+# 8.1.2 实参和形参
+print("/n8.1.2")
+#  greet_user(username)中username是一个形参；
+#  greet_user('jesse')中jesse是一个实参；
+# 过程：在greet_user('jesse')中，将实参'jesse'传递给函数greet_user(),这个值被储存在username()中
+# 抽象与具体
