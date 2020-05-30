@@ -15,11 +15,11 @@ greet_user()# 打印Hello，调用函数，依次指定函数名以及用括号�
 # 8.1.1 向函数传递信息
 print("\n8.1.1")
 
-def greet_user1(username): # 函数接受代码greet_user1('jeese')传递的信息
+def greet_user1(username): # 函数定义：函数接受代码greet_user1('jeese')传递的信息
     """显示简单的用户语"""
     print("Hello, " + username.title() + "!")
 
-greet_user1('jeese') # 代码greet_user1('jeese')调用函数greet_user(),并向它提供执行print语句所需的信息
+greet_user1('jeese') # 函数调用：代码greet_user1('jeese')调用函数greet_user(),并向它提供执行print语句所需的信息
 greet_user1('sourch') # 可以根据需要调用函数greet_user1()任意次，无论传入什么都会生成相应的输出
 
 

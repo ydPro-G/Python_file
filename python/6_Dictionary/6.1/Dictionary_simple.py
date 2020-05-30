@@ -49,7 +49,6 @@ alien_0['color'] = 'yellow'
 print(alien_0['color'])
 
 
-
 #   6.2.4修改字典中的值———依次指定——字典名-方括号——键——等号——值
 print("\n6.2.4")
 alien_0 = {'color': 'green'}
