@@ -55,3 +55,6 @@ print(number)
 
 number = [x**2 for x in range(11,20)]
 print(number)
+
+number = [y**3 for y in range(1,6)]
+print(number)

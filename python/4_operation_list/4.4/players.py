@@ -57,3 +57,7 @@ players = ['charles', 'martina', 'michael', 'florence', 'eli']
 for p in players[1:3]:
     print(p)
     
+print("\n")
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for i in players[0:4]:
+    print(i)
