@@ -58,3 +58,6 @@ print(number)
 
 number = [y**3 for y in range(1,6)]
 print(number)
+
+number = [z**5 for z in range(100,121)]
+print(max(number))

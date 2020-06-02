@@ -78,7 +78,7 @@ if 'erin' not in favorite_language.keys():
 
 # 6.3.3  按顺序遍历字典中的所有键
 # 获取字典的元素时，获取顺序时不可预测的。
-# 要以特定的顺序返回元素，在for循环中对返回的键进行排序，使用函数sorted()
+# 以特定的顺序返回元素，在for循环中对返回的键进行排序，使用函数sorted()
 print("\n6.3.3")
 favorite_language = {
     'jen': 'python',
