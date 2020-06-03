@@ -1,5 +1,11 @@
  # 7.3 使用while循环来处理列表和字典
 
+
+
+
+
+
+
 # 7.3.1 在列表之间移动元素  在验证用户的同时将其从未验证用户列表中提取出来，加入到另一个已验证用户列表
 print("7.3.1")
 
@@ -26,6 +32,21 @@ for confirmed_0 in confirmed:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #7.3.2 删除包含特定值的所有列表元素
 print("\n7.3.2")
 pets = ['dog','cat','dog','goldfish','cat','rabbit','cat']
@@ -35,6 +56,12 @@ while 'cat' in pets: # cat在列表中，一直循环
     pets.remove('cat')  #删除cat，直到没有cat结束循环
 
 print(pets)
+
+
+
+
+
+
 
 
 

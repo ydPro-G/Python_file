@@ -10,7 +10,7 @@
 # 按顺序将函数调用中的实参关联到函数定义中相关的形参
 print("\n8.2.1")
 
-def describe_pet(animal_type,pet_name):  #位置实参：实参按顺序提供形参的数据
+def describe_pet(animal_type,pet_name):  #位置实参：实参按照形参的顺序传递给函数的形参
     """显示宠物的信息"""
     print("\nI have a  " + animal_type + ".")
     print("My " + animal_type + " name is " + pet_name.title() + ".")

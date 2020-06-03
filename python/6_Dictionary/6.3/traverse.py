@@ -76,7 +76,7 @@ if 'erin' not in favorite_language.keys():
 
 
 
-# 6.3.3  按顺序遍历字典中的所有键
+# 6.3.3  按   顺序   遍历字典中的所有键
 # 获取字典的元素时，获取顺序时不可预测的。
 # 以特定的顺序返回元素，在for循环中对返回的键进行排序，使用函数sorted()
 print("\n6.3.3")
@@ -87,7 +87,7 @@ favorite_language = {
     'phil': 'python',
 }
 
-# 对方法dictionary.keys()结果调用函数sorted()
+# 对方法dictionary.keys()结果     调用函数sorted()
 # 在遍历前对这个列表进行排序
 for name in sorted(favorite_language.keys()): 
     print(name.title() + ", thank you for taking the poll.")
@@ -97,7 +97,7 @@ for name in sorted(favorite_language.keys()):
 
 
 
-# 6.3.4  遍历字典中得分所有值
+# 6.3.4  遍历字典中得分所有   值
 # 使用方法values(),返回一个值的列表，而不包含任何键
 print("\n6.3.4")
 
@@ -110,7 +110,7 @@ favorite_language = {
 for language in favorite_language.values():
     print(language.title())
 
-# 剔除重复项，使用集合set(a)
+# 剔除重复项，使用   集合set(a)
 print("\n")
 favorite_language = {
     'jen': 'python',

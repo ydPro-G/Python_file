@@ -1,6 +1,6 @@
 #   4.3创建数值列表
 print("4.3.1")
-#   函数range()从指定的第一个值开始打印，到指定的最后一个值前停止（不包括最后一个值（5
+#   函数range()从指定的第一个值开始打印，到指定的最后一个值停止，最后一个值不打印
 for value in range(1,5):
     print(value)
 
@@ -61,3 +61,7 @@ print(number)
 
 number = [z**5 for z in range(100,121)]
 print(max(number))
+
+number = [a**2 for a in range(1,11)]
+print(number)
+    
