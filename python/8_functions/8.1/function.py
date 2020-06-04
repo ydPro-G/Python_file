@@ -1,3 +1,24 @@
+#  函数
+#def good_users(names):                         #  |   函数定义与形参
+#    """向列表中每位用户都发出简单的问候"""         # | 这是文档字符串
+#    for name in names:  # 函数遍历收到的列表        |
+#        msg = "Hello, " + name + "."             #|
+#        print(msg)                               #|   这些是函数体
+    
+#username = ['han','tian','guo']   #定义一个用户列表
+#good_users(username) #                            | 这是函数调用与实参    调用函数，并将这个列表传递给它
+
+
+
+
+
+
+
+
+
+
+
+
 # 8.1 定义函数
 print("/n8.1")
 

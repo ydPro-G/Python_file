@@ -1,15 +1,46 @@
 # 8.3返回值；函数可以处理数据并返回一个或一组值。返回的值被称为返回值。
 # 使用return语句将  值  返回   到   调用函数   的   代码行
 
+
+
+
+
+
 # 8.3.1  返回简单值
 print("8.3.1")
-def get_formatted_name(first_name,last_name):
-    """返回整洁的姓名"""
-    full_name = first_name + " " + last_name # 将结果存储到变量full_name中
-    return full_name.title() #  将变量转换为首字母大写    并将结果返回到函数调用行
 
-musician = get_formatted_name('jimi','hendrix') # 调用返回值的函数时，提供一个变量，用于存储返回的值，将返回值存储在提供的变量中
-print(musician)
+def sum( arg1, arg2 ):#函数通过形参接受数据
+   # 返回2个参数的和."
+   total = arg1 + arg2# 将数据合二为一并将合二为一的结果储存在一个变量中
+   print(total)
+   return total  # 退出函数，并给调用方返回一个结果/表达式，也可以把这个变量的值转换下
+ 
+# 调用sum函数
+total = sum( 10, 20 ) # 接受return返回的表达式，通过表达式计算值，为了储存这个返回的值（这个值在return中就计算完了）需提供一个变量
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -95,26 +126,7 @@ print(b)
 
 # 8.3.4 结合使用函数和while循环
 # 可将函数和之前学习的任何Python结构结合起来使用
-print("\n8.3.4")
-
-def full(f,l):
-    """while和函数结合使用"""
-    f_n = f + ' ' + l
-    return f_n.title()
-# 一个无限循环
-while True:
-    print("please tell your name: ")
-    print("enter 'q' quit: ") 
-    new = input("Frist name: ")
-    if new == 'q':
-        break
-    c = input("Last name: ")
-    if c == 'q':
-        break
-    
-    b = full(new,c)
-    print("hello " + b + ".")
-
+# 单独开一个
 
 
 
