@@ -25,7 +25,7 @@ while unconfirmed_users:  #while循环不断运行，直到列表为空
 
 # 显示所有已验证用户
 print("\nThe following users have been confirmed:")
-for confirmed_0 in confirmed:
+for confirmed_0 in confirmed: # 使用for循环，将列表里的字符储存到变量中，循环输出变量
     print(confirmed_0.title())
 
 
