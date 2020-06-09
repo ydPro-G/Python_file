@@ -6,10 +6,11 @@ def make_pizza(*toppings): # *号让python创建了一个名为topping的空元�
     """
     打印顾客点的所有配料
     """
-    print(toppings)
+    print(toppings)   # 元组不能和字符串一起使用
 
 make_pizza('胡椒') #Python将实参封装到一个元组中，即使函数只收到一个值也如此
-make_pizza('青椒','番茄酱')
+make_pizza('青椒','番茄酱') # 注意要调用函数!!
+
 
 # 美化
 def make_pizza_a(*stocks): # *号让python创建一个空元组

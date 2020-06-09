@@ -54,5 +54,4 @@ print("/n8.1.2")
 #  greet_user('jesse')中jesse是一个实参；实参是调用函数时传递给函数的信息，调用函数时，要让函数使用的信息放在括号内
 
 
-# 过程：在greet_user('jesse')中，将实参'jesse'传递给函数greet_user(),这个值被储存在username()中
 # 抽象与具体
