@@ -12,11 +12,12 @@ print("8.3.1")
 def sum( arg1, arg2 ):#函数通过形参接受数据
    # 返回2个参数的和."
    a = arg1 + arg2# 将数据合二为一并将合二为一的结果储存在一个变量中
-   print(a)
-   return a  # 将变量total返回给函数调用行
+   print(a)  # 有一个print所以输出a，同时这个a的结果也被传给变量abc
+   return a  # 将变量a返回给函数调用行
  
 # 调用sum函数
-abc = sum( 10, 20 ) # 调用函数sum，并向函数传递实参的数据，运行函数体，然后将计算结果返回给total，输出total
+abc = sum( 10, 20 ) # 调用函数sum，并向函数传递实参的数据，运行函数体，然后将计算结果返回给abc，输出abc
+print(abc)
 
 
 

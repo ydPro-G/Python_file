@@ -6,7 +6,7 @@ def make_pizza(*toppings): # *号让python创建了一个名为topping的空元�
     """
     打印顾客点的所有配料
     """
-    print(toppings)   # 元组不能和字符串一起使用
+    print(toppings)                                                                                     # 元组不能和字符串一起使用
 
 make_pizza('胡椒') #Python将实参封装到一个元组中，即使函数只收到一个值也如此
 make_pizza('青椒','番茄酱') # 注意要调用函数!!
@@ -19,7 +19,7 @@ def make_pizza_a(*stocks): # *号让python创建一个空元组
     """
     print("\nMakeing a pizza with the following toppings: ")  # 美化
     for stock in stocks: # for 循环
-        print("- " + stock)  # 美化
+        print("- " + stock)  # 美化   # 元组数据先循环到变量中才可以一起使用
 
 make_pizza_a('大蒜')
 make_pizza_a('火腿')
