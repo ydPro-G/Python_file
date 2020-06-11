@@ -64,7 +64,7 @@ a = ['iphone','xiaomi','huawei']   # 未打印的设计列表，也可以从用�
 b = [] # 空列表
 
 print_models(a,b)#调用函数（print_models）,并向它传递两个列表
-show_done_models(b) # 调用函数，调用函数，并将打印好的列表传递给它
+show_done_models(b) # 调用函数，并将打印好的列表传递给它
 # 这两个有先后顺序，如果不先执行函数print_models,那么b就没有数据，所以函数show_done_models函数也获取不到打印完的数据
 
 
