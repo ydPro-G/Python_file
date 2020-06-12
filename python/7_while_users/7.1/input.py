@@ -54,8 +54,7 @@ print(7 % 3) #  1
 
 print("\n")
 # 判断一个数是奇数还是偶数
-number = input("Enter a number,and I`ll tell you if it`s even or odd: ")
-number = int(number) # 输入的数字以字符串显示，使用int()将字符串转换成数值比较
+number = int(input("Enter a number,and I`ll tell you if it`s even or odd: ")) # 输入的数字以字符串显示，使用int()将字符串转换成数值比较
 
 if number % 2 == 0: # 如果求模2后是0，说明是整数
     print("\nThe number " + str(number) + " is even.")
