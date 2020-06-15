@@ -1,6 +1,6 @@
 # 7.2 while循环不断运行
 
-# 7.2.1 使用while循环,让while循环不断地运行，直到指定的条件不满足为止。     (满足条件退出式循环)
+# 7.2.1 使用while循环,让while循环不断地运行，直到指定的条件满足为止。     (满足条件退出式循环)
 print("7.2.1")
 current_number = 1
 while current_number <= 5:  # 只要变量小于或等于5，就接着运行这个循环。循环中的代码打印current_number的值
@@ -84,7 +84,7 @@ current_number = 0 # 将变量设置为0
 while current_number < 10: # 变量小于10，进入while循环
     current_number += 1 # 步长+1的方式往上数，为1，2，3，4，5，6，7，8，9
     if current_number % 2 == 0: # if语句检查current_number与2的求模运算结果
-        continue # 结果为0（意味着变量可被2整除），执行continue语句，忽略余下的代码    满足条件退出一次，然后接着循环，直到全部循环完毕
+        continue # 结果为0（意味着变量可被2整除），    满足条件退出一次，然后接着循环，直到全部循环完毕
                  # 不能被2整除就循环执行剩余代码
  
     print(current_number)#  1 3 5 7 9 
