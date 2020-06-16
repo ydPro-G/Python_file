@@ -18,7 +18,7 @@ confirmed = []
 # 将每个经过验证的列表都移到已验证用户列表中
 while unconfirmed_users:  #while循环不断运行，直到列表为空
     current_user = unconfirmed_users.pop() # 函数pop()以每次一个的方式从列表末尾删除未验证的用户
-                                           # 由于candcace位于列表末尾，因此将首先被删除，储存到变量中
+                                           # 将列表元素弹出到变量中一直循环，直到列表为空
                                             
     print("Verifying user: " + current_user.title())
     confirmed.append(current_user) # 添加到列表中
@@ -27,9 +27,6 @@ while unconfirmed_users:  #while循环不断运行，直到列表为空
 print("\nThe following users have been confirmed:")
 for confirmed_0 in confirmed: # 使用for循环，将列表里的字符储存到变量中，循环输出变量
     print(confirmed_0.title())
-
-
-
 
 
 

@@ -65,6 +65,8 @@ else:
 
 
 
-a = "tell me? "
-message = input(a)
-print(message)
+a = int(input("number is?"))
+if a > 5:
+    print(a)
+else:
+    print("小了")
