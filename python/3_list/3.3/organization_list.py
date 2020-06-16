@@ -34,6 +34,6 @@ print(cars)
 
 
 #    3.3.4确定列表长度
-#    len()方法返回对象（字符，列表，元组等）长度或项目个数
+#    len()方法返回对象（字符，列表，元组等）长度，项目个数
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(len(cars))
