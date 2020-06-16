@@ -88,7 +88,7 @@ print("New x-position: " + str(alien_0['x_position']) + ".")
 print("\n6.2.5")
 alien_0 = {'color': 'green','points': 5}
 
-del alien_0['points']
+del alien_0['points'] # def 字典['键']
 print(alien_0)
 
 
