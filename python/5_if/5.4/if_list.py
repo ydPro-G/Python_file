@@ -21,7 +21,7 @@ print("Finshed making your pizza!")
 print("\n5.4.2")
 requested_toppings = []
 
-if requested_toppings:
+if requested_toppings: # 判断列表是否为空，为空则不执行
     for requested_topping in requested_toppings:
         print("Adding " + requested_topping + ".")
     print("\nFinisted making your pizza!")
