@@ -1,8 +1,11 @@
 # 8.3返回值；函数可以处理数据并返回一个或一组值。返回的值被称为返回值。
-# 使用return语句将  值  返回   到   调用函数   的   代码行
 
 
 
+
+
+
+# 使用return语句将  值  返回   到   调用函数   的   代码行 的 变量 中
 
 
 
@@ -13,7 +16,7 @@ def sum( arg1, arg2 ):#函数通过形参接受数据
    # 返回2个参数的和."
    a = arg1 + arg2# 将数据合二为一并将合二为一的结果储存在一个变量中
    print(a)  # 有一个print所以输出a，同时这个a的结果也被传给变量abc
-   return a  # 将变量a返回给函数调用行的变量
+   return a  # 将  值  返回   到   调用函数   的   代码行 的 变量 中
  
 # 调用sum函数
 abc = sum( 10, 20 ) # 调用函数sum，并向函数传递实参的数据，运行函数体，然后将计算结果返回给abc，输出abc
@@ -51,7 +54,7 @@ print(musicians)
 #  在用户没有提供中间名时不使用这个实参
 def get_formatted_name_optional(first_n,last_n,middle_n=''): # 中间名给出实参，
     """返回整洁的姓名""" 
-    if middle_n: #检查是否提供了中间名，将非空字符串解读为True(提供了中间名就是非空)，如果调用中提供了中间名，if middle_n 为True，执行下面的代码行    非空执行
+    if middle_n: # 非空执行 ！  检查形参是否为空
         full_n = first_n + ' ' + middle_n + ' ' + last_n
     else: # 没有提供中间名为Flase,if检测未通过，执行else     空执行
         full_n = first_n + ' ' + last_n
