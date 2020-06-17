@@ -111,7 +111,7 @@ my_car.read_odometers() # 这里调用的是方法，不是属性！！
 print("\n9.2.3.2")
 class   Carsa():
 
-    def __init__(self): # 属性已指定默认值
+    def __init__(self): # 属性已指定默认值，所以这里不用有odometer_readings形参
         """初始化描述汽车的属性"""
         self.odometer_readings = 1 # 因为这里给属性指定了默认值，所以不需要有形参
 
@@ -134,16 +134,6 @@ my_car = Carsa() # 实例必须先指定类，才能使用类！！！
 my_car.update_odometer(23) # 调用这个方法，向它提供实参，这个实参被存储到要修改的方法中
 my_car.read_odometers()
 my_car.update_odometer(10)     # 提示禁止修改
-
-
-
-
-
-
-
-
-
-
 
 
 
