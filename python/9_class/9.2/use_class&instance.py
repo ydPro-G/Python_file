@@ -190,14 +190,10 @@ class Car_b():
 
 # 实例
 my_used_car = Car_b('audi','A1',2013) # 创建一个实例
-print(my_used_car.get_messages())
+print(my_used_car.get_messages()) # 方法要传递实参，所以要()，属性不需要传递实参，所以不需要
 
 my_used_car.update_odometer_b(23500) # 调用方法update，更新属性self.odometer_reading_b
 my_used_car.read_odometer_b()
 
 my_used_car.increment_odometer(100) # 调用方法increment，并加入到属性self.odometer_reading_b中
 my_used_car.read_odometer_b()
-
-
-    
-

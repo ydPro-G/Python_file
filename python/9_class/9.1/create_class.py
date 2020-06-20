@@ -1,5 +1,4 @@
 # 9.1 创建和使用类
-# 使用类几乎可以模拟任何东西
 # 类表示的不是特定的，而是普遍的
 
 # 9.1.1 创建dog类
@@ -12,27 +11,25 @@ class Dog(): # 定义了一个名为Dog的类 ， 在Python中首字母大写的
 
     def __init__(self,name,age): # 方法_init_ ，类中的函数称为方法，关于函数的一切都适用于方法 ， 唯一重要的差别是调用方法的方式，
                                  
-                                 # _init_()是一个特殊的方法，根据Dog类创建新实例时，Python都会自动调用_init_()
+                                 # _init_()是一个特殊的方法，根据Dog类创建新实例时，Python都会自动运行它，
                                  
                                  # 开头和末尾各有两个下划线，避免python默认方法与普通方法发生名称冲突
                                  
                                  # 方法_init_定义成包含三个形参，self,name,age,   self，它是一个 指向 实例本身 的  引用
-                                
-                                 # 形参self必不可少，并位于其他形参前面，python调用_init_()方法创建Dog实例时，自动传入实参self
-                                 # 每个与类相关联的方法调用都自动传递实参self，它是一个 指向 实例本身 的  引用，让实例能够访问类中的属性和方法
-                                 # 创建实例时，python将调用类的方法_init_(),然后通过实参向类传递名字和年龄，self自动传递，so，每当我们根据类创建实例时，都只需给最后两个形参(name,age)提供值
+                                 
+                                 # 方法_init_()接受这些形参的值，将他们存储在根据这个类创建的实例的属性中 
 
         
         # 属性
-        """初始化属性"""
-        self.name = name # 两个变量前缀都有self，self为前缀的变量都可  供类中所有 方法 使用，通过 类的任何实例来访问这些变量
-        self.age = age   # 实参的值被储存到形参中，形参中的值被存储到属性中，属性通过self可以被类中方法使用，        这些属性也被关联到当前创建的实例中
-                         # 可以获取输入的值也可以自定义值，两者的不同就是，属性设置默认值后就可以不用有形参了，形参的作用在于获取实参
+        """初始化属性name和age"""
+        self.name = name # 属性 = 形参 属性也可以被实例使用
+        self.age = age # 可以获取输入的值也可以自定义值，两者的不同就是，属性设置默认值后就可以不用有形参了，形参的作用在于获取实参
                         
+
         # 方法
-    def sit(self): # Dog类定义了方法sit(),它们只需要形参self，让实例能够访问这些方法
+    def sit(self): # Dog类定义了方法sit(),这些方法不需要额外的信息，它们只需要形参self，让实例能够访问这些方法
         """模拟小狗被命令时蹲下"""
-        print(self.name.title() + " is now sitting.") # 属性能被方法使用
+        print(self.name.title() + " is now sitting.") # 使用属性
 
     def roll_over(self):
         """模拟小狗被命令时打滚"""
@@ -59,8 +56,8 @@ my_dog = Dog('xiaobai',6) # 使用的是Dog类，使用实参调用Dog类中的�
                           # 将这个实例实例存储在变量my_dog中
                           # 首字母大写的名称指的是类，小写的名称指的是根据类创建的实例
 
-print("My dog name is " + my_dog.name.title() + ".") # 访问实例的属性，可使用句点表示法——例：my_dog.name
-print("My dog age is " + str(my_dog.age) + ".") # Python先找到实例my_dog，再查找与这个实例相关联的属性name  在Dog类中引用这个属性时，使用的时self.name
+print("My dog name is " + my_dog.name.title() + ".") # 访问实例的属性，可使用句点表示法——例：实例.属性
+print("My dog age is " + str(my_dog.age) + ".") # Python先找到实例my_dog，再查找与这个实例相关联的属性 在Dog类中引用这个属性时，使用的时self.name
 
 
 
