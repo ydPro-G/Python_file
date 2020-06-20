@@ -54,7 +54,7 @@ def describe_pet_2(pet_name_2,animal_type_2='dog'): # 给形参指定默认值
     print("My " + animal_type_2 + " name is " + pet_name_2.title() + ".")
 
 describe_pet_2(pet_name_2='willie') #  调用这个函数时，如果没有给这个形参指定值，Python将把这个形参设置为默认值dog
-describe_pet_2(pet_name_2='jesee')  #  
+describe_pet_2(pet_name_2='jesee')  #
 
 
 

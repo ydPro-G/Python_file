@@ -24,22 +24,6 @@ good_users(username) #                            |函数调用只是单纯的�
 # 在函数中对这个列表做的任何修改都是永久性的
 print("\n8.4.1")
 
-# 创建一个列表,打印前存储
-unprinted_designs = ['iphone','huawei','xiaomi']
-# 打印后存储
-completed_models = []
-
-# 打印后从unprinted列表中转移到completed列表中
-while unprinted_designs:
-    storage = unprinted_designs.pop()
-    completed_models.append(storage)
-
-print("The printed ones are:")
-for completed_model in completed_models:
-    print(completed_model)
-
-
-
 print("\n函数")
 
 def print_models(need_models,done_models): # 定义了函数，包含两个形参   
@@ -49,7 +33,7 @@ def print_models(need_models,done_models): # 定义了函数，包含两个形�
         print("The completed have: " + save)
 
         # 打印完存储在打印完列表
-        done_models.append(save)   #将打印完所存储的变量加入到已完成列表
+        done_models.append(save)   
 
 def show_done_models(done_models): # 定义函数，这是已打印完的数据所保存的形参
     """
