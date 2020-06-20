@@ -49,7 +49,7 @@ print("\n7.1.3")
 # 处理数值信息，求模运算符(%)是一个很有用的工具，将两个数相除并返回余数。
 print(4 % 3) #  1 只指出余数是多少
 print(5 % 3) #  2
-print(6 % 3) #  0 一个数可被另一个数整除，余数就为0
+print(6 % 3) #  0 
 print(7 % 3) #  1
 
 print("\n")
@@ -65,8 +65,6 @@ else:
 
 
 
-a = int(input("number is?"))
-if a > 5:
-    print(a)
-else:
-    print("小了")
+a = "tell me? "
+message = int(input(a))
+print(message)
