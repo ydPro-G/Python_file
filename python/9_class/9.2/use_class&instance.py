@@ -197,3 +197,4 @@ my_used_car.read_odometer_b()
 
 my_used_car.increment_odometer(100) # 调用方法increment，并加入到属性self.odometer_reading_b中
 my_used_car.read_odometer_b()
+
