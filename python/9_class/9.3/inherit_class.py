@@ -131,11 +131,13 @@ print('\n')
  
 # 9.3.5 将实例用作属性
 
+# 新建一个类，将这个类的实例用作另一个类的属性
+
 # 可以将类的一部分作为一个单独的类提取出来，将大型类拆分为多个协同工作的小类
 # 将小类的实例用作大类的一个属性
 print('\n9.3.5')
 
-class Battery(): #定义一个新类，它没继承任何类
+class Battery(): #新建一个类，将这个类的实例用作另一个类的属性
     """模拟电动车"""
     def __init__(self,battery_sizes = 70): # 一个具有默认值的形参
         """初始化电瓶属性"""
@@ -161,12 +163,12 @@ class ElCar(Car):
 
     def __init__(self,make,model,year):
         super().__init__(make,model,year)
-        self.batterys = Battery() #添加了一个属性，创建一个新的Battery实例，将该实例存储在属性中，每当方法init_被调用,都将执行该操作，因此每一个子类实例都包含一个自动创建的Battery实例
+        self.batterys = Battery() #这个类现在被用作实例，添加了一个属性，创建一个新的Battery实例，将该实例存储在属性中，每当方法init_被调用,都将执行该操作，因此每一个子类实例都包含一个自动创建的Battery实例，
 
 
 my_t = ElCar('teals','model`s',2019)
 print(my_t.get_descriptive_name())
-my_t.batterys.describe_batterys() #让Python在实例my_t中查找属性batterys，并对存储在该属性中的Bsattery实例，调用方法describe_batterys()
+my_t.batterys.describe_batterys() #这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
 
 
 
