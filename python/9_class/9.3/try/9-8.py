@@ -41,7 +41,7 @@ class Privileges():#新建一个类，将这个类的实例用作另一个类的
     def show_privileges(self):
         print("管理员的权限有：" + self.privilege)
 messages = Privileges()
-print(messages.show_privileges()) # 注意要调用方法
+messages.show_privileges() # 注意要调用方法
 
 
 class Admin(User):
@@ -50,9 +50,11 @@ class Admin(User):
         self.one = Privileges() #将类中的实例用作这个类中的属性
 
 admin = Admin('X','M',15)
-print(admin.one.show_privileges()) # 这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
+print(admin.one.show_privileges()) #因为python中print函数需要返回值，如果你在print函数中所放的函数没有返回值，那么print将会return None
+admin.one.show_privileges() # 这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
 
-
+# python中print函数需要返回值，如果你在print函数中所放的函数没有返回值，那么print将会return None
+# 简单来说就是在show_privileges方法中print()已经输出了返回值，那么在实例中自然 return None
 
 
 

@@ -137,23 +137,29 @@ print('\n')
 # 将小类的实例用作大类的一个属性
 print('\n9.3.5')
 
-class Battery(): #新建一个类，将这个类的实例用作另一个类的属性
-    """模拟电动车"""
-    def __init__(self,battery_sizes = 70): # 一个具有默认值的形参
-        """初始化电瓶属性"""
-        self.battery_sizes = battery_sizes
-
-
-
-    def describe_batterys(self): # 方法
-        """关于电瓶容量的一条讯息"""
-        print("This car has a " + str(self.battery_sizes) + "-KWH")
+class Battery():
+	"""一次模拟电动汽车电瓶的简单尝试"""
+	def __init__(self,battery_size=70):
+		#battery_size为形参
+		"""初始化电瓶的属性"""
+		self.battery_size=battery_size
+	def describe_battery(self):
+		"""打印一条描述电瓶容量的信息"""
+		print("This car has a "+str(self.battery_size)+"-kwh battery.")
+		#方法describe_battery被移到了Barrery类中
+	def get_range(self):
+		"""打印一条信息，指出电瓶的续航里程"""
+		if self.battery_size==70:
+			range=240
+		elif self.battery_size==85:
+			range=270
+		message="This car can go approximately "+str(range)
+		message+=" miles on a full charge."
+		print(message)   # 这是一个方法，这不是一个实例
             
 
 
-message = str(range)
-message += " miles on a full charge."
-print(message)        
+      
     
     
     
@@ -167,9 +173,8 @@ class ElCar(Car):
 
 
 my_t = ElCar('teals','model`s',2019)
-print(my_t.get_descriptive_name())
-my_t.batterys.describe_batterys() #这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
-
+print(my_t.get_descriptive_name())#这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
+my_t.batterys.get_range()
 
 
 
