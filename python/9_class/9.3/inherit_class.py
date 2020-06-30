@@ -57,7 +57,7 @@ class ElectricCar(Car): # 定义了子类，子类继承父类，括号内指定
     """电动车"""
     def __init__(self,make,model,year): # 方法_init_()接受创建Car实例所需的信息
         """初始化父类属性"""
-        super().__init__(make,model,year) # super()，让父类和子类关联起来，让python调用子类的父类的方法_init_()，让子类实例包含父类的所有属性，父类也被称为超类(super)
+        super().__init__(make,model,year) # super()，让父类和子类关联起来，让python调用父类的方法_init_()，让子类实例包含父类的所有属性，父类也被称为超类(super)
 
 
 my_tesla = ElectricCar('电动车','电动',2016) # 创建一个子类的实例，存储到变量中。 这行代码调用子类中定义的方法_init_()，后者让Python调用父类Car中定义的方法_init_()，我们提供实参
