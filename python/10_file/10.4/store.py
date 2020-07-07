@@ -30,7 +30,7 @@ filename = 'numbers.json'
 
  # 以写入模式 打开 文件
 with open(filename,'w') as f_obj:
-    # 使用json.dump()将数字列表转储到json中
+    # 使用json.dump()将数字列表转储到json中；两个实参，要存储的数据和存储数据的文件对象
     json.dump(numbers,f_obj)
 
 
@@ -40,7 +40,7 @@ filename_load = 'numbers.json'
 
  # 打开这个文件
 with open(filename) as f_load:
-    # 使用函数json.load()加载存储在文件中的信息，并存储到变量中
+    # 使用函数json.load()加载存储在json文件中的信息，并存储到变量中
     numbers_load = json.load(f_load)
 
 print(numbers_load)
@@ -128,3 +128,10 @@ else:
 print('\n10.4.3')
 
 # 10.4.3  重构 
+ # 代码可以正常运行，但是可做进一步改进——将代码划分为一系列完成具体工作的函数。
+ # 这样的过程被称为重构
+
+
+ # 将大部分逻辑放到多个函数里
+
+ # 相关查看refactor.py
