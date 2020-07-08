@@ -73,7 +73,7 @@ with open(filename) as file_objects:  # 调用open()后，将一个表示文件�
 
 
 
-
+print('\n10.1.4')
 # 10.1.4 创建一个包含文件各行内容的列表
  # 使用with时，open返回的文件对象只在with代码块内可用
  # 如果要在with代码块外访问文件内容，可在with代码块内将文件的各行存储在一个列表中。并在with代码块外使用该列表
