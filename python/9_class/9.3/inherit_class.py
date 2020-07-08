@@ -51,6 +51,15 @@ class Car():
     
 
 
+
+
+
+
+
+
+
+
+
 # 创建子类时，父类必须包含在当前文件中，且位于子类前面
 
 class ElectricCar(Car): # 定义了子类，子类继承父类，括号内指定父类名称
@@ -173,8 +182,9 @@ class ElCar(Car):
 
 
 my_t = ElCar('teals','model`s',2019)
-print(my_t.get_descriptive_name())#这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
-my_t.batterys.get_range()
+print(my_t.get_descriptive_name())
+my_t.batterys.get_range()#这里先在实例中查找属性，并调用该属性中关联的类的另一类的方法
+my_t.batterys.describe_battery()
 
 
 
