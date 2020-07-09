@@ -49,13 +49,11 @@ print(musicians)
 
 #  让中间名变为可选，可给实参middle_name指定一个默认值——空字符串
 #  在用户没有提供中间名时不使用这个实参
-def get_formatted_name_optional(first_n,last_n,middle_n=''): # 中间名给出实参，
-    """返回整洁的姓名""" 
-    if middle_n: # 非空执行
+def get_formatted_name_optional(first_n,last_n,middle_n=''): 
+    if middle_n:                                             # 非空执行
         full_n = first_n + ' ' + middle_n + ' ' + last_n
-    else:                                                      # if语句判断
-        full_n = first_n + ' ' + last_n
-    return full_n.title()
+    else:                                                      
+        return full_n.title()
 
 musician_m = get_formatted_name_optional('jimi','hendix')
 musician_p = get_formatted_name_optional('han','nai','se')

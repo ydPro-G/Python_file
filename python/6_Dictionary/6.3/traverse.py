@@ -97,7 +97,7 @@ for name in sorted(favorite_language.keys()):
 
 
 
-# 6.3.4  遍历字典中所有值
+# 6.3.4  遍历字典中得分所有   值
 # 使用方法values(),返回一个值的列表，而不包含任何键
 print("\n6.3.4")
 

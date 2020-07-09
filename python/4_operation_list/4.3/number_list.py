@@ -65,3 +65,5 @@ print(max(number))
 number = [a**2 for a in range(1,11)]
 print(number)
     
+n = [b**2 for b in range(5,7)]
+print(n) 
