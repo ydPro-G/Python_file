@@ -99,7 +99,7 @@ class NamesTestCase(unittest.TestCase):
     def test_first_last_middle_name(self):
         """能够正确处理像Wolfgang Amadeus Mozart这样的名字吗？"""
         formatted_name = get_formatted_name('one','two','three')
-        self.assertEqual(formatted_name,'One Three Two') 
+        self.assertEqual(formatted_name,'One Three Two')  # 断言方法[断言：相等]:调用了断言方法，并向它传递变量与预期要实现的结果，对变量与结果进行比较，如果相等就ok，不相等就报异常
 
 unittest.main()
 
