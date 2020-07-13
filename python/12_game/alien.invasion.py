@@ -1,30 +1,34 @@
-import sys # 导入模块
+import sys
+import pygame     #引入pygame
+def run_game():   #定义一个运行游戏界面的界面
+    #初始化游戏并且创建一个屏幕对象
+    pygame.init()   #初始化pygame背景设置
+    screen=pygame.display.set_mode((1200,800))  #设置pygame窗口尺寸的分别率 1200*800
+    pygame.display.set_caption("Alien Invasion") #游戏运行窗口的标题
 
-import pygame
-
-def run_game():
-    # 初始化游戏并创建一个屏幕对象,保持一个游戏窗口
-    pygame.init() # 初始化背景设置
-    screen = pygame.display.set_mode((1200,800))  # 调用pygame.display.set_mode创建一个名为scereen的显示窗口，所有图形元素都将在其中绘制
-                                                  # 实参(1200，800)是一个元组，指定游戏窗口的尺寸
-                                                  # 将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200，高800的游戏窗口
-                                                  # 对象screen是一个surface，在pygame中，surface是屏幕的一部分，用来显示游戏元素
-                                                  # 每个元素都是一个surface，display.set_mode()返回的surface表示整个游戏窗口，每一次循环都将自动重绘整个surface,让它保持一直循环的状态
-    pygame.display.set_caption('Alien Invasion')  # 游戏显示的标题
+    # 创建一种背景色，并将其存储在bg_color中，我们需要在while循环前定义它
     bg_color = (230,230,230)
 
-    # 开始游戏的主循环
+    #开始游戏的主循环
     while True:
-        
-        # 监视键盘和鼠标事件，这是一个事件循环
+        #监视键盘和鼠标事件
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                sys.exit()
-
-        screen.fill(bg_color)    
+                try:
+                    sys.exit()
+                except SystemExit as msg:
+                    break
         
-        # 让最近绘制的屏幕可见
-        pygame.display.flip()
+        # 每次循环时都重绘屏幕，调用方法screenfill()，用背景色填充屏幕，这个方法只接受一个实参，一种颜色        screen.fill(bg_color)
 
+
+        # 让最近绘制的屏幕可见
+        pygame.display.flip()  
 
 run_game()
+
+
+
+
+
+
