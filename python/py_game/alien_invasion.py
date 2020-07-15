@@ -24,9 +24,11 @@ def run_game():
 
     # 开始主游戏循环
     while True:
+        
 
         # 监视鼠标和键盘事件,单击游戏窗口的关闭按钮，将检测到pygame.QUIT()事件，调用sys.exit()退出游戏
-        gf.check_events() #在函数文件中
+        gf.check_events(ship) # 更新调用的check_events代码，将ship作为实参传递给它
+        ship.update()
 
         # 每次循环都重绘屏幕，让飞船显示在屏幕上，让最近绘制的屏幕可见
         gf.update_screen(ai_settings,screen,ship)

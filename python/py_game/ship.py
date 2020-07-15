@@ -23,7 +23,24 @@ class Ship():
                                                    # 要调整游戏元素的水平或垂直位置，可使用属性x，y,它们分别对应矩形左上角的x和y坐标
                                                    # 在pygame中原点(0,0)位于屏幕左上角，向右下方移动时，坐标值将增大;左上角（0,0）——右上角（1200,800）
     
-    
+        # 移动标志
+        self.moving_right = False # 属性初始值为false
+        self.moving_left = False
+
+    def update(self): # 方法update，在前述标志为True时移动飞船
+        """根据移动标志调整飞船的位置"""
+        if self.moving_right:
+            self.rect.centerx += 1
+        elif self.moving_left:
+            self.rect.centerx -= 1
+
+
+
+
+
+
+
+
     # 定义方法biltme(),根据self.rect指定的位置将图像绘制到屏幕上
     def blitme(self):
         """在指定位置绘制飞船"""

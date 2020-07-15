@@ -11,11 +11,35 @@ import sys
 import pygame
 from ship import Ship
 
-def check_events():
+def check_events(ship):
     """响应按键和鼠标事件"""
-    for event in pygame.event.get():
+    for event in pygame.event.get(): # 从队列中获取事件
         if event.type == pygame.QUIT:
             sys.exit()
+        
+        elif event.type == pygame.KEYDOWN:
+            # 左右按键按下时为True
+            if event.key == pygame.K_RIGHT:
+                ship.moving_right = True
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = True
+        
+        elif event.type == pygame.KEYUP: 
+            if event.key == pygame.K_RIGHT: # 玩家按下K_RIGHT键，触发KEYDOWN事件
+                ship.moving_right = False
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = False
+
+            
+            
+                    
+                
+                
+            
+                
+
+                
+        
 
 
 
@@ -32,3 +56,5 @@ def update_screen(ai_settings,screen,ship): #将主模块中的更新屏幕的�
     # 让最近绘制屏幕可见，每次执行while循环时都绘制一个空屏幕，并擦去就名目，使得只有新屏幕可见
         # 在移动游戏元素时，pygame.display.flip()将不断跟新屏幕，显示元素新位置，并在原来的位置隐藏元素，从而营造平滑移动的效果
     pygame.display.flip()
+
+
