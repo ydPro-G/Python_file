@@ -24,7 +24,6 @@ import json
 
  # 创建一个数字列表
 numbers = [2,3,5,7,11,13]
-
  # 指定数字列表要存储的文件名
 filename = 'numbers.json'
 
