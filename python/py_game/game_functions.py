@@ -2,6 +2,24 @@ import sys
 import pygame
 
 
+ 
+
+# 重构函数，一个响应KEYDOWN事件，一个响应KEYUP事件
+def check_keydown_events(event,ship):
+    """按下键盘触发KEYDOWN事件,true,开始移动"""
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = True
+    elif event.key == pygame.K_LEFT:
+        ship.mobing_left = True
+
+def check_keyup_events(event,ship):
+    """松开键盘触发KEYUP事件,flase，结束移动"""
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = False
+    if event.key == pygame.K_LEFT:
+        ship.moving_left = False
+
+
  # 包含形参ship，用来接收实参
 def check_events(ship):
     """响应按键与鼠标事件"""
@@ -9,22 +27,17 @@ def check_events(ship):
         if event.type == pygame.QUIT:
             sys.exit()
 
-        # 按下键盘触发KEYDOWN事件,true,开始移动
+        # 判断:如果是KEYDOWN就调用keydown函数
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                ship.moving_right = True
-            elif event.key == pygame.K_LEFT:
-                ship.moving_left = True
-        # 松开键盘触发KEYUP事件,flase，结束移动
+            check_keydown_events(event,ship)
+        # 判断:如果是KEYUP调用keyup函数
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_RIGHT:
-                ship.moving_right = False
-            elif event.key == pygame.K_LEFT:
-                ship.moving_left = False
-        
+            check_keyup_events(event,ship)
 
 
 
+
+ 
 
 
 def update_screen(ai_settings,screen,ship):
