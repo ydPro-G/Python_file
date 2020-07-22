@@ -1,3 +1,6 @@
+#   Ship类，类包含方法_init_()，管理飞船位置的方法update(),以及在屏幕上绘制飞船的方法blitme()
+
+
 import pygame
 
 class Ship():

@@ -172,7 +172,70 @@
 
 
 
-          #12.6.4 设置飞船速度为小数值
+
+
+
+#   总结：创建一系列整个游戏都要用到的对象
+#         存储到ai_sttings中的设置
+#         存储在screen中的主显示surface以及一个飞船实例
+#         包含游戏的主循环，这是一个调用check_events(),ship.update()和update.screen()的while循环
+
+# import sys
+# import pygame
+# from settings import Settings  # 所有设置的类
+# from ship import Ship # 飞船图像设置
+# import game_functions as gf # 函数设置
+
+
+
+# def run_game():
+
+#     # 初始化设置
+#     pygame.init()
+#     ai_settings = Settings()
+
+#     # 窗口大小
+#     screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height)) # display.set_mode方法设置窗口大小，存储在对象screen中，对象screen时一个surface，surface时屏幕的一部分，用于显示游戏元素，每个游戏元素都是一个surface
+    
+#     # 窗口标题
+#     pygame.display.set_caption("Alien Invasion") # display.set_caption()方法设置标题文字
+    
+#     # 在循环外创建一艘飞船
+#     ship = Ship(ai_settings,screen)  # 为飞船速度传入实参ai_settings
+    
+    
+
+
+
+#     # 开始游戏主循环
+#     while True:
+
+#         # 监视键盘和鼠标事件
+#         gf.check_events(ship)
+#         # 飞船位置在检测到键盘事件后（更新屏幕前）更新
+#         ship.update()
+#         # 更新屏幕的图像
+#         gf.update_screen(ai_settings,screen,ship)
+
+# run_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 添加射击功能，编写玩家按空格发射子弹的代码，子弹在屏幕中向上穿行，抵达屏幕边缘后消失
+
+
+
 
 import sys
 import pygame

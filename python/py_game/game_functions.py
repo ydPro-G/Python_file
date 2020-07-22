@@ -1,3 +1,6 @@
+#   包含一系列函数，函数chech_events检测相关事件，如按键和松开
+#   使用辅助函数check_keydown_events()和check_keyup_events来处理这些事件
+#   函数update_screen()，每次执行主循环都重绘屏幕
 import sys
 import pygame
 
@@ -10,7 +13,7 @@ def check_keydown_events(event,ship):
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
-        ship.mobing_left = True
+        ship.moving_left = True
 
 def check_keyup_events(event,ship):
     """松开键盘触发KEYUP事件,flase，结束移动"""
