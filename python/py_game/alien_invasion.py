@@ -283,10 +283,7 @@ def run_game():
                          # 对编组调用update时，编组自动对其中每个精灵调用update()，将为编组bullets中的每颗子弹调用bullet.update()
 
         # 删除已消失的子弹
-        for bullet in bullets.copy():  # 不要从列表或编组中删除条目！！遍历编组的副本，使用copy来设置for循环，这样能使我们在循环中修改bullets
-            if bullet.rect.bottom <= 0: # 检查这个编组中每颗子弹，看看是否已在屏幕顶端消失
-                bullets.remove(bullet) # 消失就在编组中删掉这个子弹
-        print(len(bullets)) # 显示当前还有多少子弹
+        gf.update_bullets(bullets)
 
 
         # 更新屏幕的图像

@@ -1,3 +1,4 @@
+
 #    包含Settings类，这个类只包含方法_init_()，它初始化控制飞船外观与飞船速度的属性
 class Settings():
     """存储外星人入侵的所有设置的类"""
@@ -18,6 +19,7 @@ class Settings():
         self.bullet_width = 3 # 子弹宽度
         self.bullet_height = 15 # 子弹广度
         self.bullet_color = 60,60,60 # 子弹颜色
+        self.bullets_allowed = 3 # 限制未消失子弹数为3
 
 
 
