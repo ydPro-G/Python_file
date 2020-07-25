@@ -55,3 +55,19 @@ print("/n8.1.2")
 
 
 # 抽象与具体
+
+
+
+
+
+# 补充：  传递索引
+def eggs(some_parameter):
+    some_parameter.append('hello')
+
+spam = [1,2,3]
+eggs(spam)
+
+print(spam) # spam =[1, 2, 3, 'hello']
+
+
+# 尽管spam和some_parameter包含了不同的索引，但它们都指向相同的列表
