@@ -82,3 +82,16 @@ lne_0 = [1,2,3]
 lne_0.reverse()
 print(lne_0)
 print(len(lne_0))
+
+
+
+
+
+# 引用 
+spam = [1,2,3]
+chese = spam
+chese[1] = 'hello'
+print(spam)
+# spam = [1, 'hello', 3]
+
+# 将列表赋给一个变量时，实际上是将列表的索引赋值给了该变量，他们指向的还是同一内存地址写入的数据
