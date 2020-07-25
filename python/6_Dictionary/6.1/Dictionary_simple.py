@@ -134,3 +134,26 @@ print(list(spam.keys())) # ['color', 'age']
 # 为字典添加键值对
 spam.setdefault('name','alice')
 print(spam)
+
+
+
+
+
+
+
+
+
+
+#   使用pprint，对字典输出的值进行排序
+
+import pprint
+
+message = 'It was a good'
+
+count = {}
+
+for character in message:
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+
+pprint.pprint(count)  # 对字典输出的值进行排序
