@@ -110,3 +110,20 @@ print("Sarah`s favorite language is " +
     favorite_languages['sarah'].title() + 
     ".")
     
+
+
+
+
+
+
+# 补充： 将字典值转换为列表值
+spam = {
+    'color': 'red',
+    'age': 15
+}
+
+spam.keys()
+
+print(list(spam.keys())) # ['color', 'age']
+
+# 使用keys获取keys()函数返回的dict_keys值，使用list将键值转换为列表
