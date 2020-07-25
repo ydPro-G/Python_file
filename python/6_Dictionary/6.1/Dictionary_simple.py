@@ -127,3 +127,10 @@ spam.keys()
 print(list(spam.keys())) # ['color', 'age']
 
 # 使用keys获取keys()函数返回的dict_keys值，使用list将键值转换为列表
+
+
+
+
+# 为字典添加键值对
+spam.setdefault('name','alice')
+print(spam)
