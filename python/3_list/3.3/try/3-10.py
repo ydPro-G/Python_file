@@ -104,6 +104,9 @@ print(spam)
 
 
 
+
+
+# PS1： isX查看是否包含各种数据
 # isalpha() 返回 True，如果字符串只包含字母，并且非空；
 # isalnum() 返回 True，如果字符串只包含字母和数字，并且非空；
 # isdecimal() 返回 True，如果字符串只包含数字字符，并且非空；
@@ -125,3 +128,12 @@ while True:
       if password.isalnum():
             break
       print('Passwords!')
+
+
+
+
+
+
+# PS2： startswith()和endswith() 开始关联，结束关联
+'Hello world!'.startswith('Hello') # 开始关联
+'Hello world!'.startswith('world') # 结束关联
