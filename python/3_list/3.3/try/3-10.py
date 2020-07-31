@@ -135,5 +135,17 @@ while True:
 
 
 # PS2： startswith()和endswith() 开始关联，结束关联
+
 'Hello world!'.startswith('Hello') # 开始关联
 'Hello world!'.startswith('world') # 结束关联
+
+
+
+
+
+
+
+# PS3: join()和split() 
+ #join 在一个字符串上调用，参数是一个字符串列表，返回一个字符串，返回字符串由传入的列表每个字符串连接而成
+ 'ABC'.join(['my','name','is','simple'])
+#  'MyABCnameABCisABCSimon'
