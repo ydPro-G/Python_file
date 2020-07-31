@@ -99,3 +99,29 @@ print(spam)
 
 # 变量保存可变数据类型的值时，例如字典和列表就使用索引
 # 变量保存不可变的数据类型的值的时候，例如字符串，整数或元组，变量就保存值本身
+
+
+
+
+
+# isalpha() 返回 True，如果字符串只包含字母，并且非空；
+# isalnum() 返回 True，如果字符串只包含字母和数字，并且非空；
+# isdecimal() 返回 True，如果字符串只包含数字字符，并且非空；
+# isspace() 返回 True，如果字符串只包含空格、制表符和换行，并且非空；
+# istitle() 返回 True，如果字符串仅包含以大写字母开头、后面都是小写字母的单词。
+
+ # 验证用户输入知道答对
+ 
+while True:
+      print('Enter your age:')
+      age = input()
+      if age.isdecimal():
+            break
+      print('Please enter a number for your age.')
+
+while True:
+      print('Select a new password:')
+      password = input()
+      if password.isalnum():
+            break
+      print('Passwords!')
