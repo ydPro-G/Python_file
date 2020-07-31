@@ -146,6 +146,10 @@ while True:
 
 
 # PS3: join()和split() 
- #join 在一个字符串上调用，参数是一个字符串列表，返回一个字符串，返回字符串由传入的列表每个字符串连接而成
+ # join 在一个字符串上调用，参数是一个字符串列表，返回一个字符串，返回字符串由传入的列表每个字符串连接而成
  'ABC'.join(['my','name','is','simple'])
-#  'MyABCnameABCisABCSimon'
+  #  'MyABCnameABCisABCSimon'
+ 
+ # split()针对一个字符串调用，返回一个字符串列表
+'my name is'.split()
+['my','name','is']
