@@ -153,3 +153,90 @@ while True:
  # split()针对一个字符串调用，返回一个字符串列表
 'my name is'.split()
 ['my','name','is']
+
+
+
+
+
+
+# PS4 ： ljust(),rjust,center() 三种方法对齐文本
+# ljust() ： 左对齐
+# rjust() ： 右对齐
+# center() : 中间对齐
+
+print('hello'.rjust(10))#     hello
+'hello'.ljust(10,'-') # 'hello----------' 
+'Hello'.center(20, '=')
+# '=======Hello========'
+
+
+
+
+
+
+
+# PS5 ： 用 pyperclip 模块拷贝粘贴字符串
+import pyperclip
+pyperclip.copy('hello world') # 向计算机的剪贴板发送文本
+
+pyperclip.paste() # 从剪贴板接收文本
+
+
+
+
+
+
+# PS6 ： 正则表达式
+
+# ? 匹配零次或一次前面的分组。
+# * 匹配零次或多次前面的分组。
+# + 匹配一次或多次前面的分组。
+# {n} 匹配 n 次前面的分组。
+# {n,} 匹配 n 次或更多前面的分组。
+# {,m} 匹配零次到 m 次前面的分组。
+# {n,m} 匹配至少 n 次、至多 m 次前面的分组。
+# {n,m}? 对前面的分组进行非贪心匹配。
+# ^spam 意味着字符串必须以 spam 开始。
+# spam$ 意味着字符串必须以 spam 结束。
+# . 匹配所有字符，换行符除外。
+# \d 、\w 和 \s 分别匹配数字、单词和空格。
+# \D 、\W 和 \S 分别匹配出数字、单词和空格外的所有字符。
+# [abc] 匹配方括号内的任意字符（诸如 a、b 或 c）。
+# [^abc] 匹配不在方括号内的任意字符。
+
+
+
+# 1
+phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+mo = phoneNumRegex.search('My number is 415-555-4242.')
+mo.group(1) # 获取415
+mo.group(2) # 获取555-4242
+mo.group() # 获取415-555-4242
+mo.groups() # 获取所有分组，('415', '555-4242')
+
+# 2  | 管道
+
+# 3 ？ 可选匹配
+ batRegex = re.compile(r'Bat(wo)?man')
+ mo1 = batRegex.search('The Adventures of Batman')
+ mo1.group()
+'Batman'
+
+ mo2 = batRegex.search('The Adventures of Batwoman')
+ mo2.group()
+'Batwoman'
+
+
+# 4 * 匹配零次或多次
+batRegex = re.compile(r'Bat(wo)*man')
+mo1 = batRegex.search('The Adventures of Batman')
+mo1.group()
+'Batman'
+
+mo2 = batRegex.search('The Adventures of Batwoman')
+mo2.group()
+'Batwoman'
+
+mo3 = batRegex.search('The Adventures of Batwowowowoman')
+mo3.group()
+'Batwowowowoman'
