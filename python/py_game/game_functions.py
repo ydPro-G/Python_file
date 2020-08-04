@@ -4,6 +4,7 @@
 import sys
 import pygame
 from bullet import Bullet # 导入子弹类
+from alien import Alien # 导入外星人类
 
 
  
@@ -18,7 +19,8 @@ def check_keydown_events(event,ship,ai_settings,screen,bullets): # 编组传递�
     # 子弹设置
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings,screen,ship,bullets) # 只包含玩家按空格键时用于发射子弹的代码
-
+    elif event.key == pygame.K_q:
+        sys.exit()
 
 def fire_bullet(ai_settings,screen,ship,bullets):
     """如果没有到达限制，就发射一颗子弹"""
@@ -70,7 +72,7 @@ def update_bullets(bullets):
 
 
 
-def update_screen(ai_settings,screen,ship,bullets): # 添加形参bullets
+def update_screen(ai_settings,screen,ship,alien,bullets): # 添加形参bullets
     """更新屏幕上的图像，并切换到新屏幕"""
 
     #每次循环都重绘屏幕
@@ -79,6 +81,7 @@ def update_screen(ai_settings,screen,ship,bullets): # 添加形参bullets
     for bullet in bullets.sprites(): # 方法bullets.sprites返回一个列表，其中包含了bullets中的所有元素
         bullet.draw_bullet()
     ship.blitme()# 将飞船绘制到屏幕上
+    aliens.draw(screen)
 
     # # 每次执行while循环时都绘制一个空屏幕，并擦去旧屏幕，使得只有新屏幕可见，移动游戏元素时，flip将不断更新屏幕，在原来位置隐藏元素
     pygame.display.flip()

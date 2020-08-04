@@ -14,6 +14,7 @@
 #     # 开始游戏主循环
 #     while True:
 
+
 #         # 监视键盘和鼠标事件
 #         for event in pygame.event.get(): # 为了访问
 #             if event.type == pygame.QUIT:
@@ -234,6 +235,7 @@
 
 #   添加射击功能，编写玩家按空格发射子弹的代码，子弹在屏幕中向上穿行，抵达屏幕边缘后消失
 #   将子弹存储到编组中，这个编组是pygame.sprite.Group的一个实例
+#   设置外星人实例
 
 
 
@@ -243,6 +245,7 @@ import pygame
 from pygame.sprite import Group # 编组类
 from settings import Settings  # 所有设置的类
 from ship import Ship # 飞船图像设置
+from alien import Alien # 外星人的设置类
 import game_functions as gf # 函数设置
 
 
@@ -260,13 +263,18 @@ def run_game():
     # 窗口标题
     pygame.display.set_caption("Alien Invasion") # display.set_caption()方法设置标题文字
     
-    # 在循环外创建一艘飞船
+    # 在循环外创建一艘飞船，一个子弹编组和一个外星人编组
     ship = Ship(ai_settings,screen)  # 为飞船速度传入实参ai_settings
 
     # 创建一个用于存储子弹的编组
     bullets = Group() # 导入pygame.sprite中的Group类，创建一个Groyp实例，将其命名为bullets
-    
-    
+    aliens = Group()
+
+    # 创建一个外星人实例
+    alien = Alien(ai_settings,screen)
+
+     # 创建外星人群
+    gf.create_fleet(ai_settings,screen,aliens)
 
 
 
@@ -284,10 +292,11 @@ def run_game():
 
         # 删除已消失的子弹
         gf.update_bullets(bullets)
+        
 
 
-        # 更新屏幕的图像
-        gf.update_screen(ai_settings,screen,ship,bullets)# 在update_screen中，需要更新绘制到屏幕上的bullets
+        # 更新屏幕的图像，传递了一个外星人实例
+        gf.update_screen(ai_settings,screen,ship,aliens,bullets)# 在update_screen中，需要更新绘制到屏幕上的bullets
                          
 
 run_game()
