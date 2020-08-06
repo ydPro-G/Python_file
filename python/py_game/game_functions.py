@@ -72,7 +72,7 @@ def update_bullets(bullets):
 
 
 
-def update_screen(ai_settings,screen,ship,alien,bullets): # 添加形参bullets
+def update_screen(ai_settings,screen,ship,aliens,bullets): # 添加形参bullets
     """更新屏幕上的图像，并切换到新屏幕"""
 
     #每次循环都重绘屏幕
@@ -81,8 +81,26 @@ def update_screen(ai_settings,screen,ship,alien,bullets): # 添加形参bullets
     for bullet in bullets.sprites(): # 方法bullets.sprites返回一个列表，其中包含了bullets中的所有元素
         bullet.draw_bullet()
     ship.blitme()# 将飞船绘制到屏幕上
-    aliens.draw(screen)
+    aliens.draw(screen) # 在屏幕上绘制编组中的每个外星人
 
     # # 每次执行while循环时都绘制一个空屏幕，并擦去旧屏幕，使得只有新屏幕可见，移动游戏元素时，flip将不断更新屏幕，在原来位置隐藏元素
     pygame.display.flip()
         
+
+
+def create_fleet(ai_settings,screen,aliens):
+    """创建外星人群"""
+    # 创建一个外星人，计算每行可容纳多少个外星人
+    # 外星人间距为外星人宽度
+    alien = Alien(ai_settings,screen) # 创建一个外星人
+    alien_width = alien.rect.width # 获取外星人宽度
+    available_space_x = ai_settings.screen_width - 2 * alien_width # 计算外星人之间的宽度
+    number_aliens_x = int(available_space_x / (2 * alien_width)) # 计算外星人可容纳数量
+
+    # 创建第一行外星人
+    for alien_number in range(number_aliens_x): # 从零创建外星人数
+        # 创建一个外星人并将其加入当前行
+        alien = Alien(ai_settings,screen)
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        aliens.add(alien)
