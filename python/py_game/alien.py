@@ -1,12 +1,13 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     """表示单个外星人的类"""
-    
-    def __init__(self,ai_settings,screen):
+
+    def __init__(self, ai_settings, screen):
         """初始化外星人并设置其初始位置"""
-        super(Alien,self).__init__()
+        super(Alien, self).__init__()
         self.screen = screen   # 设置形参的属性
         self.ai_settings = ai_settings
 
@@ -15,12 +16,26 @@ class Alien(Sprite):
         self.rect = self.image.get_rect()  # 获取图片的矩形
 
         # 每个外星人最初都在屏幕左上角附近
-        self.rect.x = self.rect.width # 外星人的左边距为外星人的宽度
-        self.rect.y = self.rect.height # 上边距设置为外星人的高度
+        self.rect.x = self.rect.width  # 外星人的左边距为外星人的宽度
+        self.rect.y = self.rect.height  # 上边距设置为外星人的高度
 
         # 存储外星人的准确位置
         self.x = float(self.rect.x)
 
     def blitme(self):
         """在指定位置绘制外星人"""
-        self.screen.blit(self.image,self.rect)
+        self.screen.blit(self.image, self.rect)
+
+    def check_edges(self):  # 查看任何外星人位于左边缘还是右边缘
+        """检查外星人是否撞到了屏幕边缘，如果撞到就返回True"""
+        screen_rect = self.screen.get_rect()
+        if self.rect.right >= screen_rect.right:  # 如果外星人的rect的right属性大于或等于屏幕rect的right属性，就说明外星人位于屏幕右边缘
+            return True
+        elif self.rect.left <= 0:  # 如果外星人的rect的left属性小于或等于0，就说明外星人位于屏幕的左边缘
+            return True
+
+    def update(self):
+        """向左或向右移动外星人"""
+        self.x += (self.ai_settings.alien_speed_factor * 
+            self.ai_settings.fleet_direction)   # 移动量设置为外星人速度和fleet_direction的乘积，让外星人向左或向右移动
+        self.rect.x = self.x  # 使用self.x的值来更新外星人的rect位置

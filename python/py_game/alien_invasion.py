@@ -293,7 +293,9 @@ def run_game():
 
         # 删除已消失的子弹
         gf.update_bullets(bullets)
-        
+
+        # 更新每个外星人的位置
+        gf.update_aliens(aliens)
 
 
         # 更新屏幕的图像，传递了一个外星人实例

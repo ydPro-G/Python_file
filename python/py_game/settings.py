@@ -21,5 +21,12 @@ class Settings():
         self.bullet_color = 60,60,60 # 子弹颜色
         self.bullets_allowed = 3 # 限制未消失子弹数为3
 
+         # 外星人设置
+        self.alien_speed_factor = 1 # 属性 =1 
+        self.fleet_drop_speed = 10 # 撞到边缘时向下移动的速度
+        # fleet_direction为1表示向右移，-1表示向左移
+        self.fleet_direction = 1
+
+
 
 
