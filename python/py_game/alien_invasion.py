@@ -270,7 +270,7 @@ def run_game():
     bullets = Group() # 导入pygame.sprite中的Group类，创建一个Groyp实例，将其命名为bullets
     aliens = Group() # 外星人的空编组
     # 创建外星人群
-    gf.create_fleet(ai_settings,screen,aliens)
+    gf.create_fleet(ai_settings,screen,ship,aliens) # 储存飞船对象的形参
 
     # 创建一个外星人实例
     alien = Alien(ai_settings,screen)
