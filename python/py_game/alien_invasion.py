@@ -236,6 +236,7 @@
 #   添加射击功能，编写玩家按空格发射子弹的代码，子弹在屏幕中向上穿行，抵达屏幕边缘后消失
 #   将子弹存储到编组中，这个编组是pygame.sprite.Group的一个实例
 #   设置外星人实例
+#   添加外星人移动限制
 
 
 
@@ -295,7 +296,7 @@ def run_game():
         gf.update_bullets(bullets)
 
         # 更新每个外星人的位置
-        gf.update_aliens(aliens)
+        gf.update_aliens(ai_settings,aliens)
 
 
         # 更新屏幕的图像，传递了一个外星人实例
