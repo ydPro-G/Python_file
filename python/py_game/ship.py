@@ -52,4 +52,4 @@ class Ship():
         
     def blitme(self):
         """在指定位置绘制飞船"""
-        self.screen.blit(self.image,self.rect) # 根据sekf.rect指定的位置将图像绘制到屏幕上
+        self.screen.blit(self.image,self.rect) # 根据self.rect指定的位置将图像绘制到屏幕上

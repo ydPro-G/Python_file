@@ -5,7 +5,7 @@ import sys
 import pygame
 from bullet import Bullet  # 导入子弹类
 from alien import Alien  # 导入外星人类
-
+from time import sleep
 
 # 重构函数，一个响应KEYDOWN事件，一个响应KEYUP事件
 # 编组传递给了check_keydown_events
@@ -54,8 +54,10 @@ def check_events(ai_settings, screen, ship, bullets):  # 添加形参bullets
             check_keyup_events(event, ship)
 
 
+
+
 # 将 删除已经消失的子弹
-def update_bullets(bullets):
+def update_bullets(bullets,aliens,ai_settings,ship,screen):
     """更新子弹位置，删除已消失的子弹"""
     # 更新子弹位置
     bullets.update()
@@ -64,6 +66,20 @@ def update_bullets(bullets):
     for bullet in bullets.copy():  # 不要从列表或编组中删除条目！！遍历编组的副本，使用copy来设置for循环，这样能使我们在循环中修改bullets
         if bullet.rect.bottom <= 0:  # 检查这个编组中每颗子弹，看看是否已在屏幕顶端消失
             bullets.remove(bullet)  # 消失就在编组中删掉这个子弹
+    
+    # 检查是否有子弹击中了外星人
+    # 如果是这样，就删除相应的子弹和外星人
+    collisions = pygame.sprite.groupcollide(bullets,aliens,True,True)
+      #   遍历所有子弹，遍历所有外星人，当子弹和外星人的rect重叠时，groupcollide()就在它返回的字典中添加一个键值对
+      #   两个True告诉pygame删除发生碰撞的子弹和外星人
+      # 要模拟高能子弹，将第一个布尔实参设置为False，第二个为True，子弹与外星人碰撞就不会消失，外星人会消失
+    
+    # 生成新的外星人
+    if len(aliens) == 0:
+        # 删除现有子弹新建外星人
+        bullets.empty() # 删除子弹
+        create_fleet(ai_settings,screen,ship,aliens) # 调用create_fleet新建外星人群
+
 
 
 def update_screen(ai_settings, screen, ship, aliens, bullets):  # 添加形参bullets
@@ -139,7 +155,14 @@ def change_fleet_direction(ai_settings, aliens):
     ai_settings.fleet_direction *= -1 # 修改为当前值与-1的乘积
 
 
-def update_aliens(ai_settings,aliens):
+def update_aliens(ai_settings,aliens,ship):
     """检查是否有外星人位于屏幕边缘，并更新整群外星人的位置"""
     check_fleet_edges(ai_settings, aliens) # 调用check_fleet_edges来确定是有外星人位于屏幕边缘
     aliens.update()  # 对外星人编组aliens调用方法update，将自动对每个外星人调用方法update()
+
+    # 检测外星人与飞船之间的碰撞
+    if pygame.sprite.spritecollideany(ship,aliens): # 方法spritecollideany()接受两个实参，一个精灵一个编组，如果两者有碰撞，就停止遍历编组
+        print("Ship hit!!!") # 没有发生碰撞方法就返回None
+
+
+    

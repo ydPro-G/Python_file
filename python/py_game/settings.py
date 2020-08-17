@@ -11,11 +11,12 @@ class Settings():
         self.screen_height = 800  # 窗口大小
         self.bg_color = (230,230,230) # 窗口背景色
 
-        # 飞船速度设置
+        # 飞船设置
         self.ship_speed_factor = 1.5 # 将速度值设置为小数值，更方便控制飞moving_right
+        self.ship_limit = 3 # 飞船数量
 
         # 子弹设置
-        self.bullet_speed_factor = 1 # 子弹速度，比飞船稍低
+        self.bullet_speed_factor = 3 # 子弹速度，比飞船稍低,提高子弹速度
         self.bullet_width = 3 # 子弹宽度
         self.bullet_height = 15 # 子弹广度
         self.bullet_color = 60,60,60 # 子弹颜色
