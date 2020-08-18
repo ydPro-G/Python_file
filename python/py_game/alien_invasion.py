@@ -9,6 +9,8 @@
 #   添加外星人移动限制
 #   碰撞：游戏元素重叠在一起，使用sprite.groupcollide()检测子弹编组与外星人编组成员间的碰撞
 #   生成新的外星人
+#   外星人与飞船碰撞结束游戏
+#   外星人到达屏幕底端结束游戏
 
 
 
@@ -63,22 +65,26 @@ def run_game():
 
         # 监视键盘和鼠标事件
         gf.check_events(ai_settings,screen,ship,bullets)
-        # 飞船位置在检测到键盘事件后（更新屏幕前）更新
-        ship.update()
 
         bullets.update() # 将bullets传递给check_events和update_screen()
                          # 在check_events中，需要在玩家按空格处理bullets
                          # 对编组调用update时，编组自动对其中每个精灵调用update()，将为编组bullets中的每颗子弹调用bullet.update()
 
+        if stats.game_active:
+        # 飞船位置在检测到键盘事件后（更新屏幕前）更新
+            ship.update()
+
+        
+
         # 删除已消失的子弹
-        gf.update_bullets(bullets,aliens,screen,ship,bullets)
+            gf.update_bullets(bullets,aliens,screen,ship,bullets)
 
         # 更新每个外星人的位置,使用这些实参跟踪玩家还有多少艘飞船，创建一群新外星人
-        gf.update_aliens(ai_settings,aliens,ship,stats,screen,bullets)
+            gf.update_aliens(ai_settings,aliens,ship,stats,screen,bullets)
 
 
         # 更新屏幕的图像，传递了一个外星人实例
-        gf.update_screen(ai_settings,screen,ship,aliens,bullets)# 在update_screen中，需要更新绘制到屏幕上的bullets
+            gf.update_screen(ai_settings,screen,ship,aliens,bullets)# 在update_screen中，需要更新绘制到屏幕上的bullets
                          
 
 run_game()

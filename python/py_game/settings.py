@@ -13,7 +13,7 @@ class Settings():
 
         # 飞船设置
         self.ship_speed_factor = 1.5 # 将速度值设置为小数值，更方便控制飞moving_right
-        self.ship_limit = 3 # 飞船数量
+        self.ship_limit = 2 # 飞船数量,变为2第三次暂停游戏
 
         # 子弹设置
         self.bullet_speed_factor = 3 # 子弹速度，比飞船稍低,提高子弹速度
