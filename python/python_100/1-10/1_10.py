@@ -4,7 +4,7 @@ for i in range(2000,3201):
         print(i,end=",")
 print("\b")
 
-# 一个能计算给定数字阶乘的程序，用逗号打印
+# 2一个能计算给定数字阶乘的程序，用逗号打印
 num = int(input())
 
 fact = 1
@@ -18,3 +18,8 @@ else:
     for i in range(1,num + 1):
         fact = fact * i
     print("%d的阶乘为%d"%(num,fact))
+
+# 3.给定的整数n，编写一个程序生成字典，包括(i,ixi)这样的证书然后输出
+n = int(input('请输入一个数字:'))
+ans = {i : i*i for i in range(1,n+1)}
+print(ans)
