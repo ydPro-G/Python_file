@@ -21,5 +21,5 @@ else:
 
 # 3.给定的整数n，编写一个程序生成字典，包括(i,ixi)这样的证书然后输出
 n = int(input('请输入一个数字:'))
-ans = {i : i*i for i in range(1,n+1)}
+ans = {i : i*i for i in range(1,n*1)}
 print(ans)
