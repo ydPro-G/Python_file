@@ -23,3 +23,4 @@ else:
 n = int(input('请输入一个数字:'))
 ans = {i : i*i for i in range(1,n*1)}
 print(ans)
+
