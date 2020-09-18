@@ -5,4 +5,4 @@ lst = tuple(num) #input.tuple ()方法可以将 list 转换为 tuple
 print(num)
 print(lst)
 
-# 5
+# 5 定义有两个方法的类，从控制台输入获取字符串，打印字符串，打印大写字符串，包含简单的测试函数来测试类方法
