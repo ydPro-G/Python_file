@@ -6,3 +6,16 @@ print(num)
 print(lst)
 
 # 5 定义有两个方法的类，从控制台输入获取字符串，打印字符串，打印大写字符串，包含简单的测试函数来测试类方法
+
+calss Iostring():
+    def get_string(self):
+        self = input()
+    def print_string(self):
+        print(self.upper())
+
+xx = IOstring()
+xx.get_string()
+xx.print_string()
+
+
+
