@@ -67,3 +67,6 @@ print(number)
     
 n = [b**2 for b in range(5,7)]
 print(n) 
+
+num = [c**3 for c in range(8,11)]
+print(num[:])

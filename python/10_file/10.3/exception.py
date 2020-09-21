@@ -43,7 +43,7 @@ print("10.3.1-2")
 #         answer = int(first_number) / int(second_number)
 #         print(answer)
 # except ZeroDivisionError:
-#     print("不能除以0")  # 不能让用户看见traceback，也会暴漏系统安全性
+#     print("不能除以0")  # 不能让用户看见traceback，会暴漏系统安全性
 
 
 
@@ -53,7 +53,7 @@ print("10.3.1-2")
 
 
 print('\n10.3.4')
-10.3.4 else代码块
+#10.3.4 else代码块
 
 print("Give me two numbers, and I`ll divide them.")
 print("Enter 'q' to quit.")

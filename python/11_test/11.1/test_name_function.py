@@ -93,7 +93,7 @@ class NamesTestCase(unittest.TestCase):
     def test_first_last_name(self):
         """能够正确处理像Janis Joplin这样的姓名吗？"""
         formatted_name = get_formatted_name('janis','joplin') 
-        self.assertEqual(formatted_name,'Janis Joplin')
+        self.assertEqual(formatted_name,'Janis Joplin') # 断言
 
  # 方法名必须以test打头，这样才会自动运行
     def test_first_last_middle_name(self):
