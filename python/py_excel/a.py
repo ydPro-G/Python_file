@@ -2,10 +2,11 @@
 import  xdrlib ,sys
 import xlrd
 import os
+import requests
 """参考文档： https://blog.csdn.net/Cloudox_/article/details/53812213 """
 
 #打开excel文件
-def open_excel(file= 'test.xlsx'):
+def open_excel(file= 'test1.xlsx'):
     try:
         data = xlrd.open_workbook(file)
         return data
@@ -13,13 +14,13 @@ def open_excel(file= 'test.xlsx'):
         print(e)
 
 #根据名称获取Excel表格中的数据   参数:file：Excel文件路径     colnameindex：表头列名所在行的索引  ，by_name：Sheet1名称
-def excel_table_byname(file= 'test.xlsx', colnameindex=0, by_name='Sheet1'):
+def excel_table_byname(file= 'test1.xlsx', colnameindex=0, by_name='2020.03'):
     data = open_excel(file) #打开excel文件
     table = data.sheet_by_name(by_name) #根据sheet名字来获取excel中的sheet
     nrows = table.nrows #行数 
     colnames = table.row_values(colnameindex) #某一行数据 
     list =[] #装读取结果的序列
-    for rownum in range(0, nrows): #遍历每一行的内容
+    for rownum in range(1, nrows): #遍历每一行的内容
          row = table.row_values(rownum) #根据行号获取行
          if row: #如果行存在
              app = [] #一行的内容
@@ -32,8 +33,19 @@ def excel_table_byname(file= 'test.xlsx', colnameindex=0, by_name='Sheet1'):
 def main():
    tables = excel_table_byname()
    for row in tables:
-       print("["+'"name=>"'+row[0]+','+'"number"=>'+str(row[1])+","+'"price"=>'+str(row[2])+"],")
-    # print(row[1])
+       url = "http://httpbin.org/post"
+       data = "["+'"name"=>"'+row[0]+'",'+'"number"=>'+str(row[1])+","+'"price"=>'+str(row[2])+"]," # Post请求发送的数据，字典格式
+       print(data);
+       res = requests.post(url=url, data=data) # 这里使用post方法，参数和get方法一样
+       print(res.text)
+
+
+
+      
+    #    print("["+'"name"=>"'+row[0]+'",'+'"number"=>'+str(row[1])+","+'"price"=>'+str(row[2])+"],")
+
+
+
 
 if __name__=="__main__":
     main()
